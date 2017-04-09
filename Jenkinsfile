@@ -3,8 +3,10 @@ pipeline {
 
     stages {
         stage('Build') { 
-            steps { 
-                sh './gradlew war' 
+            steps {
+                echo 'Start Build'
+                sh './gradlew war'
+                echo 'Finish Build'
             }
         }
     }
